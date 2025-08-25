@@ -1,3 +1,20 @@
 <resources>
+    <!-- App Info -->
     <string name="app_name">Bonjour Buddy</string>
+    <string name="app_logo_desc">Bonjour Buddy Logo</string>
+    <string name="subtitle">Your fun way to learn French 🇫🇷</string>
+
+    <!-- Button Labels -->
+    <string name="black">Black</string>
+    <string name="green">Green</string>
+    <string name="purple">Purple</string>
+    <string name="red">Red</string>
+    <string name="yellow">Yellow</string>
+
+    <!-- Accessibility Descriptions -->
+    <string name="desc_black_button">Learn the French word for Black</string>
+    <string name="desc_green_button">Learn the French word for Green</string>
+    <string name="desc_purple_button">Learn the French word for Purple</string>
+    <string name="desc_red_button">Learn the French word for Red</string>
+    <string name="desc_yellow_button">Learn the French word for Yellow</string>
 </resources>
