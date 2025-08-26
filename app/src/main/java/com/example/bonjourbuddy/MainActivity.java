@@ -1,5 +1,6 @@
 package com.example.bonjourbuddy;
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -11,7 +12,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,39 +31,32 @@ public class MainActivity extends AppCompatActivity {
         Button Button_Red = findViewById(R.id.Button_Red);
         Button Button_Yellow = findViewById(R.id.Button_Yellow);
 
-        Button_Black.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(MainActivity.this, "French: Black.", Toast.LENGTH_SHORT).show();
-            }
-        });
+        Button_Black.setOnClickListener(this);
+        Button_Green.setOnClickListener(this);
+        Button_Purple.setOnClickListener(this);
+        Button_Red.setOnClickListener(this);
+        Button_Yellow.setOnClickListener(this);
+    }
 
-        Button_Green.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(MainActivity.this, "French: Green.", Toast.LENGTH_SHORT).show();
-            }
-        });
+    @Override
+    public void onClick(View view) {
+        int clickButtonId = view.getId();
 
-        Button_Purple.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(MainActivity.this, "French: Purple.", Toast.LENGTH_SHORT).show();
-            }
-        });
+        if(clickButtonId == R.id.Button_Black) {
+            PlaySounds(R.raw.black_color_sound);
+        } else if (clickButtonId == R.id.Button_Green) {
+            PlaySounds(R.raw.green_color_sound);
+        } else if (clickButtonId == R.id.Button_Purple) {
+            PlaySounds(R.raw.purple_color_sound);
+        } else if (clickButtonId == R.id.Button_Red) {
+            PlaySounds(R.raw.red_color_sound);
+        } else {
+            PlaySounds(R.raw.yellow_color_sound);
+        }
+    }
 
-        Button_Red.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(MainActivity.this, "French: Red.", Toast.LENGTH_SHORT).show();
-            }
-        });
-
-        Button_Yellow.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(MainActivity.this, "French: Yellow.", Toast.LENGTH_SHORT).show();
-            }
-        });
+    public void PlaySounds(int id) {
+        MediaPlayer mediaPlayer = MediaPlayer.create(this, id);
+        mediaPlayer.start();
     }
 }
