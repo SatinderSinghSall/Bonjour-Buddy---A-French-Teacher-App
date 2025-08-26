@@ -13,6 +13,7 @@
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/logoCard"
+        android:layout_marginTop="40dp"
         android:layout_width="140dp"
         android:layout_height="140dp"
         app:cardCornerRadius="70dp"
@@ -35,12 +36,11 @@
     <TextView
         android:id="@+id/appTitle"
         style="@style/TextAppearance.Material3.HeadlineMedium"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/app_name"
         android:textAlignment="center"
         android:textStyle="bold"
-        android:textSize="24sp"
         android:textColor="@android:color/black"
         app:layout_constraintTop_toBottomOf="@id/logoCard"
         app:layout_constraintStart_toStartOf="parent"
@@ -50,12 +50,11 @@
     <TextView
         android:id="@+id/subTitle"
         style="@style/TextAppearance.Material3.BodyMedium"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/subtitle"
         android:textAlignment="center"
         android:textColor="#666666"
-        android:textSize="16sp"
         app:layout_constraintTop_toBottomOf="@id/appTitle"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -74,14 +73,14 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/Button_Black"
-            style="@style/Widget.Material3.Button"
-            android:layout_width="350sp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:minHeight="60dp"
             android:text="@string/black"
             android:textSize="18sp"
             android:textStyle="bold"
             android:layout_marginVertical="10dp"
+            android:layout_marginHorizontal="24dp"
             app:cornerRadius="40dp"
             app:icon="@drawable/ic_black_circle"
             app:iconTint="@null"
@@ -93,14 +92,14 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/Button_Green"
-            style="@style/Widget.Material3.Button"
-            android:layout_width="350sp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:minHeight="60dp"
             android:text="@string/green"
             android:textSize="18sp"
             android:textStyle="bold"
             android:layout_marginVertical="10dp"
+            android:layout_marginHorizontal="24dp"
             app:cornerRadius="40dp"
             app:icon="@drawable/ic_green_circle"
             app:iconTint="@null"
@@ -112,14 +111,14 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/Button_Purple"
-            style="@style/Widget.Material3.Button"
-            android:layout_width="350sp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:minHeight="60dp"
             android:text="@string/purple"
             android:textSize="18sp"
             android:textStyle="bold"
             android:layout_marginVertical="10dp"
+            android:layout_marginHorizontal="24dp"
             app:cornerRadius="40dp"
             app:icon="@drawable/ic_purple_circle"
             app:iconTint="@null"
@@ -131,14 +130,14 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/Button_Red"
-            style="@style/Widget.Material3.Button"
-            android:layout_width="350sp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:minHeight="60dp"
             android:text="@string/red"
             android:textSize="18sp"
             android:textStyle="bold"
             android:layout_marginVertical="10dp"
+            android:layout_marginHorizontal="24dp"
             app:cornerRadius="40dp"
             app:icon="@drawable/ic_red_circle"
             app:iconTint="@null"
@@ -150,14 +149,14 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/Button_Yellow"
-            style="@style/Widget.Material3.Button"
-            android:layout_width="350sp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:minHeight="60dp"
             android:text="@string/yellow"
             android:textSize="18sp"
             android:textStyle="bold"
             android:layout_marginVertical="10dp"
+            android:layout_marginHorizontal="24dp"
             app:cornerRadius="40dp"
             app:icon="@drawable/ic_yellow_circle"
             app:iconTint="@null"
@@ -166,6 +165,7 @@
             app:backgroundTint="@color/yellow"
             android:textColor="@android:color/black"
             app:elevation="6dp"/>
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
